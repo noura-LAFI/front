@@ -1,0 +1,195 @@
+<div class="accordion" id="accordionPricing">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button
+        class="accordion-button btn btn-secondary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        Add a new category
+      </button>
+    </h2>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse show"
+      aria-labelledby="headingOne"
+      data-bs-parent="#accordionPricing" >
+      <div class="accordion-body">
+        <form [formGroup]="addCategoryForm" (ngSubmit)="addCateg()" action="">
+          <div style="width: 500px">
+            <label for="email">Name of category </label>
+            <input
+              [formControlName]="'name'"
+              type="text"
+              class="form-control"
+              id="categorieName"
+            />
+            <button
+              style="position: absolute; margin-top: -40px; margin-left: 510px"
+              class="btn btn-sm btn-secondary"
+              type="submit" >
+              Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="table-responsive py-4">
+  <div class="mb-4">
+    <form
+      [formGroup]="searchCategForm"
+      (ngSubmit)="searchCateg()"
+      style="width: 400px"
+      class="navbar-search form-inline"
+      id="navbar-search-main"
+    >
+      <div class="input-group input-group-merge search-bar">
+          <button
+            style="position: absolute;  margin-left: 510px"
+            type="submit"   >
+            search
+          </button> 
+        <input
+          [formControlName]="'name'"
+          type="text"
+          class="form-control"
+          id="topbarInputIconLeft"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="topbar-addon"
+        />
+      </div>
+    </form>
+  </div>
+  <table class="table table-flush" id="datatable">
+    <thead class="thead-light">
+      <tr>
+        <th>Name</th>
+        <th>Created at</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of AllCateg">
+        <td>{{ c.name }}</td>
+        <td>{{ c.createdAt }}</td>
+        <td>
+          <svg
+            data-bs-toggle="modal"
+            data-bs-target="#modifCatModel"
+            style="height: 20px; width: 20px"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+            ></path>
+          </svg>
+          <div
+            class="modal fade"
+            id="modifCatModel"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modal-default"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="h6 modal-title">Terms of Service</h2>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <form>
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="name@example.com"
+                      />
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary">
+                    Accept
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link text-gray ms-auto"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg
+            (click)="delCateg(c.id)"
+            class="icon icon-xs text-danger ms-1"
+            title=""
+            data-bs-toggle="tooltip"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            data-bs-original-title="Delete"
+            aria-label="Delete"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination mb-0">
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">4</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">5</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

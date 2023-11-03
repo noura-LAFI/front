@@ -1,0 +1,1298 @@
+<div class="py-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4"
+  >
+    <div class="d-block mb-4 mb-md-0">
+      <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+          <li class="breadcrumb-item">
+            <a href="#"
+              ><svg
+                class="icon icon-xxs"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path></svg
+            ></a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Sellerss List
+          </li>
+        </ol>
+      </nav>
+      <h2 class="h4">Sellers List</h2>
+    </div>
+    <a 
+    data-bs-toggle="modal"
+                  data-bs-target="#modalNewUser"
+    class="btn btn-sm btn-gray-800 d-inline-flex align-items-center"
+    ><svg
+      class="icon icon-xs me-2"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+      ></path>
+    </svg>
+    New Seller</a
+  >
+  <div
+  id="modalNewUser"
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+     <h1>Seller Détails</h1>   
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="row">
+            <div class="col-12">
+              <div>
+                <div class="card border-0 shadow mb-4">
+                  <div class="card-body">
+                    <form [formGroup] =" addSellerForm" (ngSubmit) = "addSeller()">
+                      <div class="row">
+                          <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="first_name">First Name</label>
+                                  <input  [formControlName]="'firstName'" class="form-control" id="first_name" type="text" placeholder="Enter your first name" required="">
+                              </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                              <div>
+                                  <label for="last_name">Last Name</label>
+                                  <input [formControlName]="'lastName'" class="form-control" id="last_name" type="text" placeholder="Also your last name" required="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row align-items-center">
+                          <div class="col-md-6 mb-3">
+                              <label for="birthday">Birthday</label>
+                              <div class="input-group">
+                                  <span class="input-group-text">
+                                      <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                                  </span>
+                                  <input data-datepicker="" [formControlName]="'birthday'" class="form-control datepicker-input" id="birthday" type="text" placeholder="dd/mm/yyyy" required=""><div class="datepicker datepicker-dropdown datepicker-orient-left datepicker-orient-bottom" style="left: 81px; top: 375px;"><div class="datepicker-picker"><div class="datepicker-header"><div class="datepicker-title" style="display: none;"></div><div class="datepicker-controls"><button type="button" class="btn prev-btn">«</button><button type="button" class="btn view-switch">October 2023</button><button type="button" class="btn next-btn">»</button></div></div><div class="datepicker-main"><div class="datepicker-view"><div class="days"><div class="days-of-week"><span class="dow">Su</span><span class="dow">Mo</span><span class="dow">Tu</span><span class="dow">We</span><span class="dow">Th</span><span class="dow">Fr</span><span class="dow">Sa</span></div><div class="datepicker-grid"><span class="datepicker-cell day" data-date="1696114800000">1</span><span class="datepicker-cell day" data-date="1696201200000">2</span><span class="datepicker-cell day" data-date="1696287600000">3</span><span class="datepicker-cell day" data-date="1696374000000">4</span><span class="datepicker-cell day" data-date="1696460400000">5</span><span class="datepicker-cell day" data-date="1696546800000">6</span><span class="datepicker-cell day" data-date="1696633200000">7</span><span class="datepicker-cell day" data-date="1696719600000">8</span><span class="datepicker-cell day" data-date="1696806000000">9</span><span class="datepicker-cell day" data-date="1696892400000">10</span><span class="datepicker-cell day" data-date="1696978800000">11</span><span class="datepicker-cell day" data-date="1697065200000">12</span><span class="datepicker-cell day" data-date="1697151600000">13</span><span class="datepicker-cell day focused" data-date="1697238000000">14</span><span class="datepicker-cell day" data-date="1697324400000">15</span><span class="datepicker-cell day" data-date="1697410800000">16</span><span class="datepicker-cell day" data-date="1697497200000">17</span><span class="datepicker-cell day" data-date="1697583600000">18</span><span class="datepicker-cell day" data-date="1697670000000">19</span><span class="datepicker-cell day" data-date="1697756400000">20</span><span class="datepicker-cell day" data-date="1697842800000">21</span><span class="datepicker-cell day" data-date="1697929200000">22</span><span class="datepicker-cell day" data-date="1698015600000">23</span><span class="datepicker-cell day" data-date="1698102000000">24</span><span class="datepicker-cell day" data-date="1698188400000">25</span><span class="datepicker-cell day" data-date="1698274800000">26</span><span class="datepicker-cell day" data-date="1698361200000">27</span><span class="datepicker-cell day" data-date="1698447600000">28</span><span class="datepicker-cell day" data-date="1698534000000">29</span><span class="datepicker-cell day" data-date="1698620400000">30</span><span class="datepicker-cell day" data-date="1698706800000">31</span><span class="datepicker-cell day next" data-date="1698793200000">1</span><span class="datepicker-cell day next" data-date="1698879600000">2</span><span class="datepicker-cell day next" data-date="1698966000000">3</span><span class="datepicker-cell day next" data-date="1699052400000">4</span><span class="datepicker-cell day next" data-date="1699138800000">5</span><span class="datepicker-cell day next" data-date="1699225200000">6</span><span class="datepicker-cell day next" data-date="1699311600000">7</span><span class="datepicker-cell day next" data-date="1699398000000">8</span><span class="datepicker-cell day next" data-date="1699484400000">9</span><span class="datepicker-cell day next" data-date="1699570800000">10</span><span class="datepicker-cell day next" data-date="1699657200000">11</span></div></div></div></div><div class="datepicker-footer"><div class="datepicker-controls"><button type="button" class="btn today-btn" style="display: none;">Today</button><button type="button" class="btn clear-btn" style="display: none;">Clear</button></div></div></div></div>                                               
+                               </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                              <label for="gender">Gender</label>
+                              <select [formControlName]="'gender'" class="form-select mb-0" id="gender" aria-label="Gender select example">
+                                  <option selected="">Gender</option>
+                                  <option value="Female">Female</option>
+                                  <option value="Male">Male</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6 mb-3">
+                              <div class="form-group">
+                                  <label for="email">Email</label>
+                                  <input [formControlName]="'email'" class="form-control" id="email" type="email" placeholder="name@company.com" required="">
+                              </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="email">Password</label>
+                                <input  [formControlName]="'password'" class="form-control" id="password" type="password"  required="">
+                            </div>
+                        </div>
+                          <div class="col-md-6 mb-3">
+                              <div class="form-group">
+                                  <label for="phone">Phone</label>
+                                  <input [formControlName]="'phone'" class="form-control" id="phone" type="text" placeholder="+12-345 678 910" required="">
+                              </div>
+                          </div>
+                      </div>
+                      <h2 class="h5 my-4">Location</h2>
+                      <div class="row">
+                          <div class="col-sm-9 mb-3">
+                              <div class="form-group">
+                                  <label for="address">Address</label>
+                                  <input [formControlName]="'adress'" class="form-control" id="address" type="text" placeholder="Enter your home address" required="">
+                              </div>
+                          </div>
+                        
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-4 mb-3">
+                              <div class="form-group">
+                                  <label for="city">City</label>
+                                  <input [formControlName]="'city'" class="form-control" id="city" type="text" placeholder="City" required="">
+                              </div>
+                          </div>
+                          <div class="col-sm-4 mb-3">
+                              <label for="state">State</label>
+                              <select [formControlName]="'state'" class="form-select w-100 mb-0" id="state" name="state" aria-label="State select example">
+                                  <option selected="">State</option>
+                                  <option value="Sousse">Sousse</option>
+                                  <option value="SidiBouzid">SidiBouzid</option>
+                                  
+                              </select>
+                          </div>
+                          <div class="col-sm-4">
+                              <div class="form-group">
+                                  <label for="zip">ZIP</label>
+                                  <input [formControlName]="'zip'" class="form-control" id="zip" type="text" placeholder="ZIP" required="">
+                              </div>
+                          </div>
+                      </div>
+                      <div style =" margin-left:80%" >
+                          <button  class="btn btn-gray-800 mt-2 animate-up-2" type="submit">Save all</button>
+                      </div>
+                  </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link active"
+      id="home-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#home"
+      type="button"
+      role="tab"
+      aria-controls="home"
+      aria-selected="true"
+    >
+      Approuved
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link"
+      id="profile-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#profile"
+      type="button"
+      role="tab"
+      aria-controls="profile"
+      aria-selected="false"
+    >
+      Not-Approuved
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="home"
+    role="tabpanel"
+    aria-labelledby="home-tab"
+  >
+    <div class="card card-body shadow border-0 table-wrapper table-responsive">
+      <div class="table-settings mb-4">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-9 col-lg-8 d-md-flex">
+            <div class="input-group me-2 me-lg-3 fmxw-300">
+              <span class="input-group-text"
+                ><svg
+                  class="icon icon-xs"
+                  x-description="Heroicon name: solid/search"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg> </span
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Search users"
+              />
+            </div>
+          
+            <select
+              class="form-select fmxw-200 d-none d-md-inline"
+              aria-label="Message select example 2"
+            >
+              <option selected="selected">All</option>
+              <option value="1">Active</option>
+              <option value="2">Inactive</option>
+              <option value="3">Pending</option>
+              <option value="3">Cancelled</option>
+            </select>
+          </div>
+          <div class="col-3 col-lg-4 d-flex justify-content-end">
+            <div class="btn-group">
+              <div class="dropdown me-1">
+                <button
+                  class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-1"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="icon icon-sm"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                    ></path>
+                  </svg>
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end pb-0">
+                  <span class="small ps-3 fw-bold text-dark">Show</span>
+                  <a
+                    class="dropdown-item d-flex align-items-center fw-bold"
+                    href="#"
+                    >10
+                    <svg
+                      class="icon icon-xxs ms-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path></svg></a
+                  ><a class="dropdown-item fw-bold" href="#">20</a>
+                  <a class="dropdown-item fw-bold rounded-bottom" href="#"
+                    >30</a
+                  >
+                </div>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-1"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="icon icon-sm"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-xs dropdown-menu-end pb-0"
+                >
+                  <span class="small ps-3 fw-bold text-dark">Show</span>
+                  <a
+                    class="dropdown-item d-flex align-items-center fw-bold"
+                    href="#"
+                    >10
+                    <svg
+                      class="icon icon-xxs ms-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path></svg></a
+                  ><a class="dropdown-item fw-bold" href="#">20</a>
+                  <a class="dropdown-item fw-bold rounded-bottom" href="#"
+                    >30</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div  > 
+
+        <h1>there are no suppliers</h1>
+      </div> -->
+      <!-- Table is here -->
+      <table
+        *ngIf="selApprouved"
+        class="table user-table table-hover align-items-center"
+      >
+        <thead>
+          <tr>
+            <th class="border-bottom">
+              <div class="form-check dashboard-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="userCheck55"
+                />
+                <label class="form-check-label" for="userCheck55"></label>
+              </div>
+            </th>
+            <th class="border-bottom">Email</th>
+            <th class="border-bottom">Status</th>
+            <th class="border-bottom">Phone</th>
+            <th class="border-bottom">Adress</th>
+            <th class="border-bottom">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- ici -->
+
+          <tr *ngFor="let s of selApprouved">
+            <td>
+              <a href="#" class="d-flex align-items-center">
+                <div
+                  class="avatar d-flex align-items-center justify-content-center fw-bold rounded bg-secondary me-3"
+                >
+                  <span>SA</span>
+                </div>
+                <div class="d-block">
+                  <span class="fw-bold">{{ s.firstName }}</span>
+                  <div class="small text-gray">{{ s.lastName }}</div>
+                </div></a
+              >
+            </td>
+            <td>
+              <span class="fw-normal">{{ s.email }}</span>
+            </td>
+            <td>
+              <span class="fw-normal d-flex align-items-center">
+                <div class="bg-success dot rounded-circle me-1"></div>
+                {{ s.status }}</span
+              >
+            </td>
+            <td>
+              <span class="fw-normal d-flex align-items-center">
+                {{ s.phone }}</span
+              >
+            </td>
+            <td>
+              <span class="fw-normal d-flex align-items-center">
+                {{ s.adress }}</span
+              >
+            </td>
+            <td>
+              <div style="display: flex; justify-content: space-between">
+                <a (click)="disableSeller(s.id)" href="">
+                  <svg
+                    style="height: 20px; width: 20px"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                  Disable
+                </a>
+
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDétails1"
+                  href=""
+                >
+                  <svg
+                    style="height: 20px; width: 20px"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  Détails
+                </a>
+
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalNotification"
+                  href=""
+                >
+                  <svg
+                    class="icon icon-xs text-danger ms-1"
+                    title=""
+                    data-bs-toggle="tooltip"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-bs-original-title="Delete"
+                    aria-label="Delete"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    ></path></svg
+                ></a>
+                <!-- hhh -->
+                <!-- Button Modal -->
+                <!-- <button type="button" class="btn btn-block btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalNotification">Notification</button> -->
+                <!-- Modal Content -->
+                <div
+                  class="modal fade"
+                  id="modalNotification"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="modalTitleNotify"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <!-- <p class="modal-title" id="modalTitleNotify">
+                          A new experience, personalized for you.
+                        </p> -->
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="py-3 text-center">
+                          <svg
+                            class="icon icon-xl text-primary"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+
+                          <h3 class="h4 modal-title my-3">
+                            are you sure to delete this sellers!
+                          </h3>
+                          <button
+                            type="button"
+                            (click)="deleteSeller(s.id)"
+                            class="btn btn-sm btn-primary"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Modal Content -->
+              </div>
+              <div
+                id="modalDétails1"
+                class="modal fade bd-example-modal-lg"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="myLargeModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="card shadow border-0 text-center p-0">
+                              <!-- <div
+                                class="profile-cover rounded-top"
+                                data-background="../assets/img/profile-cover.jpg"
+                                style="
+                                  background: url('../assets/img/profile-cover.jpg');
+                                "
+                              ></div> -->
+                              <div class="card-body pb-5">
+                                <img
+                                  src="../assets/img/team/profile-picture-1.jpg"
+                                  class="avatar-xl rounded-circle mx-auto mt-n7 mb-4"
+                                  alt="Neil Portrait"
+                                />
+                                <h4 class="h3">Neil Sims</h4>
+                                <h5 class="fw-normal">
+                                  Senior Software Engineer
+                                </h5>
+                                <p class="text-gray mb-4">New York, USA</p>
+                               
+                                <a class="btn btn-sm btn-secondary" href="#"
+                                  >Send Message</a
+                                >
+                              </div>
+                            </div>
+
+                            <div>
+                              <div class="card border-0 shadow mb-4">
+                                <div class="card-body">
+                                  <div class="table-responsive">
+                                    <table
+                                      class="table table-centered table-nowrap mb-0 rounded"
+                                    >
+                                      <thead class="thead-light">
+                                        <tr>
+                                          <th class="border-0 rounded-start">
+                                            #
+                                          </th>
+                                          <th class="border-0">
+                                           Name of product
+                                          </th>
+                                          <th class="border-0">Category</th>
+                                          <th class="border-0">Global Rank</th>
+                                          <th class="border-0">
+                                            Available in stock
+                                          </th>
+                                          <th class="border-0 rounded-end">
+                                            Change
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                    
+                                        <tr>
+                                          <td>
+                                            <a
+                                              href="#"
+                                              class="text-primary fw-bold"
+                                              >2</a
+                                            >
+                                          </td>
+                                          <td
+                                            class="fw-bold d-flex align-items-center"
+                                          >
+                                            <svg
+                                              class="icon icon-xxs text-gray-500 me-2"
+                                              aria-hidden="true"
+                                              focusable="false"
+                                              data-prefix="fab"
+                                              data-icon="google"
+                                              role="img"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              viewBox="0 0 488 512"
+                                            >
+                                              <path
+                                                fill="currentColor"
+                                                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                                              ></path>
+                                            </svg>
+                                            Google Search
+                                          </td>
+                                          <td>Search / Organic</td>
+                                      
+                                          <td>--</td>
+                                          <td>
+                                            <div
+                                              class="row d-flex align-items-center"
+                                            >
+                                              <div class="col-12 col-xl-2 px-0">
+                                                <div class="small fw-bold">
+                                                  18%
+                                                </div>
+                                              </div>
+                                              <div
+                                                class="col-12 col-xl-10 px-0 px-xl-1"
+                                              >
+                                                <div
+                                                  class="progress progress-lg mb-0"
+                                                >
+                                                  <div
+                                                    class="progress-bar bg-dark"
+                                                    role="progressbar"
+                                                    aria-valuenow="18"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 18%"
+                                                  ></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                          <td class="text-success">
+                                            <div
+                                              class="d-flex align-items-center"
+                                            >
+                                              <svg
+                                                class="icon icon-xs me-1"
+                                                fill="currentColor"
+                                                viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  fill-rule="evenodd"
+                                                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                                  clip-rule="evenodd"
+                                                ></path>
+                                              </svg>
+                                              <span class="fw-bold"
+                                                >17.78%</span
+                                              >
+                                            </div>
+                                          </td>
+                                        </tr>
+                                 
+                                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary">
+                        Accept
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-gray ms-auto"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between"
+      >
+        <nav aria-label="Page navigation example">
+          <ul class="pagination mb-0">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+        <div class="fw-normal small mt-4 mt-lg-0">
+          Showing <b>5</b> out of <b>25</b> entries
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="profile"
+    role="tabpanel"
+    aria-labelledby="profile-tab"
+  >
+    <div class="card card-body shadow border-0 table-wrapper table-responsive">
+      <div class="table-settings mb-4">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-9 col-lg-8 d-md-flex">
+            <div class="input-group me-2 me-lg-3 fmxw-300">
+              <span class="input-group-text"
+                ><svg
+                  class="icon icon-xs"
+                  x-description="Heroicon name: solid/search"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg> </span
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Search users"
+              />
+            </div>
+          
+            <select
+              class="form-select fmxw-200 d-none d-md-inline"
+              aria-label="Message select example 2"
+            >
+              <option selected="selected">All</option>
+              <option value="1">Active</option>
+              <option value="2">Inactive</option>
+              <option value="3">Pending</option>
+              <option value="3">Cancelled</option>
+            </select>
+          </div>
+          <div class="col-3 col-lg-4 d-flex justify-content-end">
+            <div class="btn-group">
+              <div class="dropdown me-1">
+                <button
+                  class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-1"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="icon icon-sm"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+                    ></path>
+                  </svg>
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end pb-0">
+                  <span class="small ps-3 fw-bold text-dark">Show</span>
+                  <a
+                    class="dropdown-item d-flex align-items-center fw-bold"
+                    href="#"
+                    >10
+                    <svg
+                      class="icon icon-xxs ms-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path></svg></a
+                  ><a class="dropdown-item fw-bold" href="#">20</a>
+                  <a class="dropdown-item fw-bold rounded-bottom" href="#"
+                    >30</a
+                  >
+                </div>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-1"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="icon icon-sm"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <div
+                  class="dropdown-menu dropdown-menu-xs dropdown-menu-end pb-0"
+                >
+                  <span class="small ps-3 fw-bold text-dark">Show</span>
+                  <a
+                    class="dropdown-item d-flex align-items-center fw-bold"
+                    href="#"
+                    >10
+                    <svg
+                      class="icon icon-xxs ms-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path></svg></a
+                  ><a class="dropdown-item fw-bold" href="#">20</a>
+                  <a class="dropdown-item fw-bold rounded-bottom" href="#"
+                    >30</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="table user-table table-hover align-items-center">
+        <thead>
+          <tr>
+            <th class="border-bottom">
+              <div class="form-check dashboard-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="userCheck55"
+                />
+                <label class="form-check-label" for="userCheck55"></label>
+              </div>
+            </th>
+            <th class="border-bottom">email</th>
+            <th class="border-bottom">Status</th>
+            <th class="border-bottom">Phone</th>
+            <th class="border-bottom">Adress</th>
+            <th class="border-bottom">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let n of selNotApprouved">
+            <td>
+              <a href="#" class="d-flex align-items-center">
+                <div
+                  class="avatar d-flex align-items-center justify-content-center fw-bold rounded bg-secondary me-3"
+                >
+                  <span>SA</span>
+                </div>
+                <div class="d-block">
+                  <span class="fw-bold">{{ n.firstName }}</span>
+                  <div class="small text-gray">{{ n.lastName }}</div>
+                </div></a
+              >
+            </td>
+            <td>
+              <span class="fw-normal">{{ n.email }}</span>
+            </td>
+            <td>
+              <button type="button" class="btn btn-default btn-circle">
+                <i class="fa fa-check"></i>
+              </button>
+              <span class="fw-normal d-flex align-items-center">
+                <div class="bg-danger dot rounded-circle me-1"></div>
+
+                {{ n.status }}</span
+              >
+            </td>
+            <td>
+              <span class="fw-normal d-flex align-items-center">
+                {{ n.phone }}</span
+              >
+            </td>
+            <td>
+              <span class="fw-normal d-flex align-items-center">
+                {{ n.adress }}</span
+              >
+            </td>
+            <td>
+              <div style="display: flex; justify-content: space-between">
+                <a (click)="enableSeller(n.id)" href="">
+                  <svg
+                    style="height: 20px; width: 20px"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+
+                  Enable
+                </a>
+
+                <a data-bs-toggle="modal"
+                data-bs-target="#modalDétails2" href="">
+                  <svg
+                    style="height: 20px; width: 20px"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  Détails
+                </a>
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalNotification1"
+                  href=""
+                >
+                  <svg
+                    class="icon icon-xs text-danger ms-1"
+                    title=""
+                    data-bs-toggle="tooltip"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-bs-original-title="Delete"
+                    aria-label="Delete"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    ></path></svg
+                ></a>
+                <!-- Modal Content -->
+                <div
+                  class="modal fade"
+                  id="modalNotification1"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="modalTitleNotify"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <!-- <p class="modal-title" id="modalTitleNotify">
+                       A new experience, personalized for you.
+                     </p> -->
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="py-3 text-center">
+                          <svg
+                            class="icon icon-xl text-primary"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+
+                          <h3 class="h4 modal-title my-3">
+                            are you sure to delete this sellers!
+                          </h3>
+                          <button
+                            type="button"
+                            (click)="deleteSeller(n.id)"
+                            class="btn btn-sm btn-primary"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                id="modalDétails2"
+                class="modal fade bd-example-modal-lg"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="myLargeModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="card shadow border-0 text-center p-0">
+                              <!-- <div
+                                class="profile-cover rounded-top"
+                                data-background="../assets/img/profile-cover.jpg"
+                                style="
+                                  background: url('../assets/img/profile-cover.jpg');
+                                "
+                              ></div> -->
+                              <div class="card-body pb-5">
+                                <img
+                                  src="../assets/img/team/profile-picture-1.jpg"
+                                  class="avatar-xl rounded-circle mx-auto mt-n7 mb-4"
+                                  alt="Neil Portrait"
+                                />
+                                <h4 class="h3">Neil Sims</h4>
+                                <h5 class="fw-normal">
+                                  Senior Software Engineer
+                                </h5>
+                                <p class="text-gray mb-4">New York, USA</p>
+                               
+                                <a class="btn btn-sm btn-secondary" href="#"
+                                  >Send Message</a
+                                >
+                              </div>
+                            </div>
+  
+                            <div>
+                              <div class="card border-0 shadow mb-4">
+                                <div class="card-body">
+                                  <div class="table-responsive">
+                                    <table
+                                      class="table table-centered table-nowrap mb-0 rounded"
+                                    >
+                                      <thead class="thead-light">
+                                        <tr>
+                                          <th class="border-0 rounded-start">
+                                            #
+                                          </th>
+                                          <th class="border-0">
+                                           Name of product
+                                          </th>
+                                          <th class="border-0">Category</th>
+                                          <th class="border-0">Global Rank</th>
+                                          <th class="border-0">
+                                            Available in stock
+                                          </th>
+                                          <th class="border-0 rounded-end">
+                                            Change
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                    
+                                        <tr>
+                                          <td>
+                                            <a
+                                              href="#"
+                                              class="text-primary fw-bold"
+                                              >2</a
+                                            >
+                                          </td>
+                                          <td
+                                            class="fw-bold d-flex align-items-center"
+                                          >
+                                            <svg
+                                              class="icon icon-xxs text-gray-500 me-2"
+                                              aria-hidden="true"
+                                              focusable="false"
+                                              data-prefix="fab"
+                                              data-icon="google"
+                                              role="img"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              viewBox="0 0 488 512"
+                                            >
+                                              <path
+                                                fill="currentColor"
+                                                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+                                              ></path>
+                                            </svg>
+                                            Google Search
+                                          </td>
+                                          <td>Search / Organic</td>
+                                      
+                                          <td>--</td>
+                                          <td>
+                                            <div
+                                              class="row d-flex align-items-center"
+                                            >
+                                              <div class="col-12 col-xl-2 px-0">
+                                                <div class="small fw-bold">
+                                                  18%
+                                                </div>
+                                              </div>
+                                              <div
+                                                class="col-12 col-xl-10 px-0 px-xl-1"
+                                              >
+                                                <div
+                                                  class="progress progress-lg mb-0"
+                                                >
+                                                  <div
+                                                    class="progress-bar bg-dark"
+                                                    role="progressbar"
+                                                    aria-valuenow="18"
+                                                    aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    style="width: 18%"
+                                                  ></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                          <td class="text-success">
+                                            <div
+                                              class="d-flex align-items-center"
+                                            >
+                                              <svg
+                                                class="icon icon-xs me-1"
+                                                fill="currentColor"
+                                                viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  fill-rule="evenodd"
+                                                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                                                  clip-rule="evenodd"
+                                                ></path>
+                                              </svg>
+                                              <span class="fw-bold"
+                                                >17.78%</span
+                                              >
+                                            </div>
+                                          </td>
+                                        </tr>
+                                 
+                                      
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary">
+                        Accept
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-gray ms-auto"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!-- End of Modal Content -->
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div
+        class="card-footer px-3 border-0 d-flex flex-column flex-lg-row align-items-center justify-content-between"
+      >
+        <nav aria-label="Page navigation example">
+          <ul class="pagination mb-0">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+        <div class="fw-normal small mt-4 mt-lg-0">
+          Showing <b>5</b> out of <b>25</b> entries
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
